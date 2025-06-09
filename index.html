@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Pavni Mahotsav 2024</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+        }
+
+        .hindi-text {
+            font-family: "Noto Sans Devanagari", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen p-4">
+    <div class="bg-yellow-50 max-w-4xl w-full shadow-xl rounded-lg overflow-hidden">
+        <div class="bg-white p-6 relative">
+            <div class="absolute top-4 left-4">
+                <img alt="Pavni Mahotsav 2024 Logo" class="h-24 md:h-30" src="/public/pavani mohastav 05.jpg" />
+            </div>
+            <div class="absolute top-4 right-4">
+                <img alt="Pavni Mahotsav 2024 Logo" class="h-24 md:h-30" src="/public/pavani mohastav 05.jpg" />
+            </div>
+            <h1 class="text-red-700 text-3xl md:text-5xl font-bold text-center hindi-text pt-4 pb-2">
+                बंपर लक्की ड्रॉ
+            </h1>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6 text-center">
+                <div class="flex flex-col items-center">
+                    <p class="text-blue-700 text-lg font-semibold hindi-text">
+                        दिवस १ ला (२४ जून)
+                    </p>
+                    <p class="text-yellow-300 text-2xl font-bold hindi-text">
+                        टिव्ही (LED)
+                    </p>
+                    <img alt="LED TV" class="h-32 md:h-40 object-contain mt-2"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhZNS7y5nPwvlHzmFzwQ0_aAxGFza6kaiHSPx_NVvuOmgkkC2eqNrP6LRWgrnX2GmbB6u7IYJRzYb_qKB1myy48bA_BZvudTuLq236q5ksNHXhDV39-cSUPWZR1GXk6lLYhzjml3NVetUyC49QzAST96KoKJ8KdrZ_zRznoYtyxxns7hwY5lAXhVJraE7un1hrOYnONcI5mGa6AN6BUYHrpagOK-owxae-JFeUTEmsxdq3l1J_ItOe6JuL4gKqq14fCkx4NTdKHu6f" />
+                </div>
+                <div class="flex flex-col items-center">
+                    <p class="text-blue-700 text-lg font-semibold hindi-text">
+                        दिवस २ रा (२४ जून)
+                    </p>
+                    <p class="text-yellow-300 text-2xl font-bold hindi-text">
+                        वॉशिंग मशीन
+                    </p>
+                    <img alt="Washing Machine" class="h-32 md:h-40 object-contain mt-2"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK8kFTQpHS5LWtDu9ZRL-Xl3klac1TEgmpg0hsHUtl8IViJPeErJZ4y48xlfJ_rsp6IJ7BXw80HR-wnFBslDCE8jvytnv9IpJNlgE2240F2bAmzvvvoZSwa56vZFCk6LDpwNFvcitDcgyLEE01VYn-LitiYU8RID4tRpUvB0ZJ3foam0x-bHTAa6XgxWwI9bEpduZ0NhnvvuQKWFwQJhOEAD4USx_nWs8e8WQy4amlLJfkyGNxw9UIYy2Q06Ro8oJN7a8C_-uCM2rW" />
+                </div>
+                <div class="flex flex-col items-center">
+                    <p class="text-blue-700 text-lg font-semibold hindi-text">
+                        दिवस ३ रा (२६ जून)
+                    </p>
+                    <p class="text-yellow-300 text-2xl font-bold hindi-text">आलमारी</p>
+                    <img alt="Wardrobe" class="h-32 md:h-40 object-contain mt-2"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfSGAmK6aoBYagjQldkZ-E9hPks-AD6BvUol4F9fHeCkonmKKIV5WPILw4wQ_7PeejWUVfu4z9-QBZCRYUzlkRrcek8OowN2Odw0OGBt2eY0-3lW96_xUEGpjg4zzv5bJevBtpMCwUxhfbLPiG9hoX65Ba7GeKAcsSOJnxOM7Fvg7gNA5I038Dn5H4WJ3qhtoePg7ZRPuLh_LvdvdPKxtlt5ZKI5CcWlrbj7TU5NBbtzQiFDlxyIsLziUlf9Z36jdOOWMiVySqpEgZ" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+<iframe id="eventFrame" src="/event_stage.html" frameborder="0" class="max-w-4xl w-full shadow-xl rounded-lg overflow-hidden"></iframe>
+<iframe id="eventFrame" src="/events.html" class="max-w-4xl w-full shadow-xl rounded-lg overflow-hidden" frameborder="0"></iframe>
+
+<script>
+    function resizeAllIframes() {
+        const iframes = document.querySelectorAll('iframe');
+        iframes.forEach(iframe => {
+            try {
+                if (iframe.contentWindow.document.body) {
+                    iframe.style.height = iframe.contentWindow.document.documentElement.scrollHeight + 'px';
+                }
+            } catch (err) {
+                console.warn("Could not access iframe contents. Is it cross-origin?", err);
+            }
+        });
+    }
+
+    // Resize when each iframe loads
+    window.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('iframe').forEach(iframe => {
+            iframe.addEventListener('load', resizeAllIframes);
+        });
+    });
+</script>
+    
+</body>
+
+</html>
