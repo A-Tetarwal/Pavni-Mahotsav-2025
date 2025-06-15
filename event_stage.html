@@ -1,137 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Event Layout</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <style>
-        body {
-            font-family: "Roboto", sans-serif;
-        }
-
-        .rotate-text {
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-            transform: rotate(180deg);
-        }
-    </style>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Event Layout</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+    @layer base {
+      body {
+        font-family: 'Roboto', sans-serif;
+      }
+    }
+    @layer utilities {
+      .rotate-text {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        transform: rotate(180deg);
+      }
+      .min-w-layout {
+        min-width: 320px;
+      }
+    }
+  </style>
 </head>
+<body class="bg-gray-100 min-h-screen p-1 md:p-4">
+<div class="w-full max-w-5xl mx-auto bg-white shadow-lg min-w-layout">
+<div class="w-full">
+<div class="h-8 sm:h-10 bg-yellow-300 flex items-center justify-center">
+</div>
+<div class="flex flex-row">
+<div class="w-16 sm:w-24 bg-sky-500 flex items-center justify-center py-0">
+<h2 class="rotate-text text-white text-xl sm:text-3xl font-bold p-2 sm:p-4 text-center">Food Court</h2>
+</div>
+<div class="flex-1 p-2 sm:p-4 bg-neutral-200">
+<div class="flex">
+<div class="w-12 sm:w-16 bg-neutral-700 relative">
+<div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-1 h-full bg-yellow-400 opacity-50"></div>
+<div class="absolute top-1 sm:top-2 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-black text-xs font-semibold p-1 rounded-sm text-center w-10 sm:w-14">
+                VIP & STAGE ENTRY
+              </div>
+</div>
+<div class="flex-1 flex flex-col items-center px-1 sm:px-2">
+<div class="w-2/3 bg-green-600 text-white text-center py-3 sm:py-6 mb-2 sm:mb-4">
+<h3 class="text-2xl sm:text-4xl font-bold">STAGE</h3>
+</div>
+<div class="w-1/3 h-6 sm:h-10 bg-green-600 mb-2 sm:mb-4"></div>
+<div class="flex flex-row justify-between w-full mb-2 space-x-1 sm:space-x-2">
+<div class="bg-red-600 text-white text-center py-1 sm:py-2 flex-1 rounded text-xs sm:text-base">SPECIAL GUEST</div>
+<div class="bg-red-600 text-white text-center py-1 sm:py-2 flex-1 rounded text-xs sm:text-base">SPECIAL GUEST</div>
+<div class="bg-red-600 text-white text-center py-1 sm:py-2 flex-1 rounded text-xs sm:text-base">SPECIAL GUEST</div>
+</div>
+<div class="flex flex-row w-full space-x-2 sm:space-x-4">
+<div class="flex-1">
+<div class="bg-fuchsia-600 text-white text-center py-3 sm:py-6 mb-2 rounded">
+<p class="text-xs sm:text-sm">150 SEATS</p>
+<p class="text-sm sm:text-xl font-bold">VIP SECTION</p>
+</div>
+<div class="bg-emerald-600 text-white text-center py-6 sm:py-10 rounded">
+<p class="text-sm sm:text-xl font-bold">GENERAL SECTION</p>
+</div>
+</div>
+<div class="w-12 sm:w-16 bg-neutral-700 relative flex flex-col items-center justify-around py-0">
+<div class="absolute top-0 left-1/2 transform -translate-x-1/2 h-full w-1 bg-yellow-400 opacity-50"></div>
+<img alt="Security guard standing" class="w-6 h-6 sm:w-10 sm:h-10 object-contain z-10 my-2 sm:my-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBqQXaZ5gF5mM7rcjA46B7L4iKw2dPOmT06V64FmtdFCPDEIaklGtsAMUhtssAOVSrJeQbPhhOBwqyt6zpUxXmMcI63CauQUYVoaT5msLt3xFjoJhlVcQjbsgTcEvFU3uUVHqarAxWL8OFvWArA_0Yy28cx4Gm4t1bajQ7YDnSzKSv1m4eb4WzkNVZJ3GqbF9vZY8ykiFlP31HeTMR3_DNj8sihlEM4twcJvtctXQM6fueWsAtScwX2VV_bfFsm3aS7BFtUhLNob0"/>
+<img alt="Security guard with arms crossed" class="w-6 h-6 sm:w-10 sm:h-10 object-contain z-10 my-2 sm:my-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT6diS8WS0PtZXI-dvUFzJxPyEJrCqngavpdj0zrhqhhXAihMmDG6yhK-TUmGnPor3ABh2-Oh6YYlUR-mx5Md414Rz0-_6biaKul_5v0ATxFSQnTcUYscHSMuuegQaFn8DvA8EP55AjAjv1zcKtlZd40U9agL7VQVJNuZ9xXxlqIBoBuMjxwKBczve624XBwUy1-1dAjy8H1m5tnRbMgcpMLnY8E-59kPTTlQBZSuHoujg8f3d-EOdXSNDB2LSiuegxryJeg9pziE"/>
+</div>
+<div class="flex-1">
+<div class="bg-fuchsia-600 text-white text-center py-3 sm:py-6 mb-2 rounded">
+<p class="text-xs sm:text-sm">150 SEATS</p>
+<p class="text-sm sm:text-xl font-bold">VIP SECTION</p>
+</div>
+<div class="bg-emerald-600 text-white text-center py-6 sm:py-10 rounded">
+<p class="text-sm sm:text-xl font-bold">GENERAL SECTION</p>
+</div>
+</div>
+</div>
+</div>
+<div class="w-12 sm:w-16 bg-neutral-700 relative">
+<div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-1 h-full bg-yellow-400 opacity-50"></div>
+<div class="absolute top-1 sm:top-2 right-1/2 transform translate-x-1/2 bg-yellow-400 text-black text-xs font-semibold p-1 rounded-sm text-center w-10 sm:w-12">
+                ENTRY
+              </div>
+</div>
+</div>
+</div>
+<div class="w-16 sm:w-24 bg-yellow-200 flex items-center justify-center py-0">
+<h2 class="rotate-text text-black text-xl sm:text-3xl font-bold p-2 sm:p-4 text-center">Exhibition</h2>
+</div>
+</div>
+<div class="flex">
+<div class="w-16 sm:w-24 h-6 sm:h-10 bg-neutral-200"></div>
+<div class="flex-1">
+<div class="flex">
+<div class="w-12 sm:w-16 h-6 sm:h-10 bg-neutral-700 relative">
+<div class="absolute top-1/2 left-0 transform -translate-y-1/2 h-1 w-full bg-yellow-400 opacity-50"></div>
+</div>
+<div class="flex-1 h-6 sm:h-10 bg-neutral-700 relative">
+<div class="absolute top-1/2 left-0 transform -translate-y-1/2 h-1 w-full bg-yellow-400 opacity-50"></div>
+</div>
+<div class="w-12 sm:w-16 h-6 sm:h-10 bg-neutral-700 relative">
+<div class="absolute top-1/2 left-0 transform -translate-y-1/2 h-1 w-full bg-yellow-400 opacity-50"></div>
+</div>
+</div>
+</div>
+<div class="w-16 sm:w-24 h-6 sm:h-10 bg-neutral-200"></div>
+</div>
+<div class="bg-neutral-500 text-white text-center py-2 sm:py-4 text-sm sm:text-base">
+        STAIRS - GENERAL SECTION
+      </div>
+<div class="h-8 sm:h-10 bg-yellow-300 flex items-center justify-center">
+</div>
+</div>
+</div>
 
-<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen p-4">
-    <div class="w-full max-w-5xl bg-white shadow-lg relative">
-        <div class="h-10 bg-yellow-300 flex items-center justify-center"></div>
-        <div class="flex">
-            <div class="w-24 bg-sky-500 flex items-center justify-center">
-                <h2 class="rotate-text text-white text-3xl font-bold p-4">
-                    Food Court
-                </h2>
-            </div>
-            <div class="flex-1 p-4 bg-neutral-200">
-                <div class="flex">
-                    <div class="w-16 bg-neutral-700 relative">
-                        <div
-                            class="absolute top-0 left-1/2 transform -translate-x-1/2 w-1 h-full bg-yellow-400 opacity-50">
-                        </div>
-                        <div
-                            class="absolute top-2 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-black text-xs font-semibold p-1 rounded-sm text-center w-14">
-                            VIP &amp; STAGE ENTRY
-                        </div>
-                    </div>
-                    <div class="flex-1 flex flex-col items-center px-2">
-                        <div class="w-2/3 bg-green-600 text-white text-center py-6 mb-4">
-                            <h3 class="text-4xl font-bold">STAGE</h3>
-                        </div>
-                        <div class="w-1/3 h-10 bg-green-600 mb-4"></div>
-                        <div class="flex justify-between w-full mb-2 space-x-2">
-                            <div class="bg-red-600 text-white text-center py-2 flex-1 rounded">
-                                SPECIAL GUEST
-                            </div>
-                            <div class="bg-red-600 text-white text-center py-2 flex-1 rounded">
-                                SPECIAL GUEST
-                            </div>
-                            <div class="bg-red-600 text-white text-center py-2 flex-1 rounded">
-                                SPECIAL GUEST
-                            </div>
-                        </div>
-                        <div class="flex w-full space-x-4">
-                            <div class="flex-1">
-                                <div class="bg-fuchsia-600 text-white text-center py-6 mb-2 rounded">
-                                    <p class="text-sm">150 SEATS</p>
-                                    <p class="text-xl font-bold">VIP SECTION</p>
-                                </div>
-                                <div class="bg-emerald-600 text-white text-center py-10 rounded">
-                                    <p class="text-xl font-bold">GENERAL SECTION</p>
-                                </div>
-                            </div>
-                            <div
-                                class="w-16 bg-neutral-700 relative flex flex-col items-center justify-center space-y-8">
-                                <div
-                                    class="absolute top-0 left-1/2 transform -translate-x-1/2 w-1 h-full bg-yellow-400 opacity-50">
-                                </div>
-                                <img alt="Security guard standing" class="w-10 h-10 object-contain z-10"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBqQXaZ5gF5mM7rcjA46B7L4iKw2dPOmT06V64FmtdFCPDEIaklGtsAMUhtssAOVSrJeQbPhhOBwqyt6zpUxXmMcI63CauQUYVoaT5msLt3xFjoJhlVcQjbsgTcEvFU3uUVHqarAxWL8OFvWArA_0Yy28cx4Gm4t1bajQ7YDnSzKSv1m4eb4WzkNVZJ3GqbF9vZY8ykiFlP31HeTMR3_DNj8sihlEM4twcJvtctXQM6fueWsAtScwX2VV_bfFsm3aS7BFtUhLNob0" />
-                                <img alt="Security guard with arms crossed" class="w-10 h-10 object-contain z-10"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT6diS8WS0PtZXI-dvUFzJxPyEJrCqngavpdj0zrhqhhXAihMmDG6yhK-TUmGnPor3ABh2-Oh6YYlUR-mx5Md414Rz0-_6biaKul_5v0ATxFSQnTcUYscHSMuuegQaFn8DvA8EP55AjAjv1zcKtlZd40U9agL7VQVJNuZ9xXxlqIBoBuMjxwKBczve624XBwUy1-1dAjy8H1m5tnRbMgcpMLnY8E-59kPTTlQBZSuHoujg8f3d-EOdXSNDB2LSiuegxryJeg9pziE" />
-                            </div>
-                            <div class="flex-1">
-                                <div class="bg-fuchsia-600 text-white text-center py-6 mb-2 rounded">
-                                    <p class="text-sm">150 SEATS</p>
-                                    <p class="text-xl font-bold">VIP SECTION</p>
-                                </div>
-                                <div class="bg-emerald-600 text-white text-center py-10 rounded">
-                                    <p class="text-xl font-bold">GENERAL SECTION</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-16 bg-neutral-700 relative">
-                        <div
-                            class="absolute top-0 left-1/2 transform -translate-x-1/2 w-1 h-full bg-yellow-400 opacity-50">
-                        </div>
-                        <div
-                            class="absolute top-2 right-1/2 transform translate-x-1/2 bg-yellow-400 text-black text-xs font-semibold p-1 rounded-sm text-center w-12">
-                            ENTRY
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="w-24 bg-yellow-200 flex items-center justify-center">
-                <h2 class="rotate-text text-black text-3xl font-bold p-4">
-                    Exhibition
-                </h2>
-            </div>
-        </div>
-        <div class="flex">
-            <div class="w-24 h-10 bg-neutral-200"></div>
-            <div class="flex-1">
-                <div class="flex">
-                    <div class="w-16 h-10 bg-neutral-700 relative">
-                        <div
-                            class="absolute top-1/2 left-0 transform -translate-y-1/2 h-1 w-full bg-yellow-400 opacity-50">
-                        </div>
-                    </div>
-                    <div class="flex-1 h-10 bg-neutral-700 relative">
-                        <div
-                            class="absolute top-1/2 left-0 transform -translate-y-1/2 h-1 w-full bg-yellow-400 opacity-50">
-                        </div>
-                    </div>
-                    <div class="w-16 h-10 bg-neutral-700 relative">
-                        <div
-                            class="absolute top-1/2 left-0 transform -translate-y-1/2 h-1 w-full bg-yellow-400 opacity-50">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="w-24 h-10 bg-neutral-200"></div>
-        </div>
-        <div class="bg-neutral-500 text-white text-center py-4">
-            STAIRS - GENERAL SECTION
-        </div>
-        <div class="h-10 bg-yellow-300 flex items-center justify-center"></div>
-    </div>
-</body>
-
-</html>
+</body></html>

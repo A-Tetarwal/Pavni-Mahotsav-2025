@@ -17,8 +17,42 @@
         .hindi-text {
             font-family: "Noto Sans Devanagari", sans-serif;
         }
+
+        .slide {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .slide-indicators {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .indicator.active {
+            background: white;
+            transform: scale(1.2);
+        }
     </style>
 </head>
+
+<!-- top pe slide show -->
 
 <body class="bg-gray-100 flex flex-col items-center justify-center">
     <div class="relative flex w-full flex-col bg-white dark group/design-root overflow-x-hidden"
@@ -31,31 +65,134 @@
                 </div>
                 <div class="flex flex-1 justify-end gap-8">
                     <div class="flex items-center gap-9">
-                        <a class="text-black text-sm font-medium leading-normal hover:text-gray-600 transition-colors" href="#">संपर्क</a>
-                        <a class="text-black text-sm font-medium leading-normal hover:text-gray-600 transition-colors" href="#">बक्षीस</a>
-                        <a class="text-black text-sm font-medium leading-normal hover:text-gray-600 transition-colors" href="#">इव्हेली</a>
+                        <a class="text-black text-sm font-medium leading-normal hover:text-gray-600 transition-colors"
+                            href="#">संपर्क</a>
+                        <a class="text-black text-sm font-medium leading-normal hover:text-gray-600 transition-colors"
+                            href="#">बक्षीस</a>
+                        <a class="text-black text-sm font-medium leading-normal hover:text-gray-600 transition-colors"
+                            href="#">इव्हेली</a>
                     </div>
                 </div>
             </header>
         </div>
     </div>
 
-    <div class="relative text-center">
-        <img alt="DJ performing at a night event" class="w-full h-auto object-cover"
-            src="https://thumbs.dreamstime.com/b/group-fans-raised-their-hands-up-music-concert-group-youth-dancing-their-hands-up-taking-videos-photos-175270640.jpg" />
-        <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center p-2">
-            <div class="bg-green-600 text-white text-lg font-semibold py-1 px-4 rounded-lg shadow-md mb-1">
-                रात्री. ७.१५ ते १०.०० पर्यंत
+    <!-- SLIDES CONTAINER -->
+    <div class="relative w-full h-screen md:h-[90vh] overflow-hidden">
+
+        <!-- Slide 1: Image with Text Overlay -->
+        <div class="slide active relative w-full h-full">
+            <img alt="DJ performing at a night event" class="w-full h-full object-cover"
+                src="https://thumbs.dreamstime.com/b/group-fans-raised-their-hands-up-music-concert-group-youth-dancing-their-hands-up-taking-videos-photos-175270640.jpg" />
+            <div
+                class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center px-4 py-8">
+                <div
+                    class="bg-green-600 text-white text-sm md:text-lg font-semibold py-1 px-4 rounded-lg shadow-md mb-2">
+                    Vidharbha Yuva Kranti Sanghathana
+                </div>
+                <p class="text-white text-base md:text-xl mb-2">Presents</p>
+                <h1 class="text-yellow-400 text-4xl md:text-6xl font-extrabold italic mb-1"
+                    style="font-family: 'Arial Black', Gadget, sans-serif; text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">
+                    Pauni
+                </h1>
+                <h1 class="text-white text-4xl md:text-6xl font-extrabold italic mb-4"
+                    style="font-family: 'Arial Black', Gadget, sans-serif; text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">
+                    Mahotsav</h1>
+                <h2 class="text-white text-lg md:text-2xl font-bold leading-tight">24, 25 & 26 June | Municipal Ground,
+                    Pauni</h2>
             </div>
-            <h2 class="text-white text-4xl md:text-5xl font-bold leading-tight mb-1">Pavni Mahotsav</h2>
-            <h1 class="text-yellow-400 text-6xl md:text-8xl font-extrabold italic mb-1"
-                style="font-family: 'Arial Black', Gadget, sans-serif; text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">DJ
+        </div>
+
+        <!-- Slide 2: Flex Image -->
+        <div class="slide w-full h-full">
+            <img src="public/01 pauni mohatsav flex.jpg" class="w-full h-full object-cover" alt="Pauni Mahotsav Flex">
+        </div>
+
+        <!-- Slide 3: Video -->
+        <div class="slide w-full h-full">
+            <video class="w-full h-full object-cover" src="public/GUJARAT.mp4" autoplay muted loop></video>
+            <div
+                class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center px-4 py-8">
+                <div
+                    class="bg-green-600 text-white text-sm md:text-lg font-semibold py-1 px-4 rounded-lg shadow-md mb-2">
+                    Vidharbha Yuva Kranti Sanghathana
+                </div>
+                <p class="text-white text-base md:text-xl mb-2">Presents</p>
+                <h1 class="text-yellow-400 text-4xl md:text-6xl font-extrabold italic mb-1"
+                    style="font-family: 'Arial Black', Gadget, sans-serif; text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">
+                    Pauni
+                </h1>
+                <h1 class="text-white text-4xl md:text-6xl font-extrabold italic mb-4"
+                    style="font-family: 'Arial Black', Gadget, sans-serif; text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">
+                    Mahotsav</h1>
+                <h2 class="text-white text-lg md:text-2xl font-bold leading-tight">24, 25 & 26 June | Municipal Ground,
+                    Pauni</h2>
+            </div>
+
+        </div>
+
+        <!-- Slide Indicators -->
+        <div class="slide-indicators">
+            <div class="indicator active" onclick="goToSlide(0)"></div>
+            <div class="indicator" onclick="goToSlide(1)"></div>
+            <div class="indicator" onclick="goToSlide(2)"></div>
+        </div>
+
+    </div>
+
+
+    <div class="bg-yellow-50 max-w-4xl w-full shadow-xl rounded-lg overflow-hidden">
+        <div class="bg-white p-4 relative">
+            <!-- <div class="relative top-2 left-2">
+                <img alt="Pavni Mahotsav 2024 Logo" class="h-20 md:h-24" src="public/pavani mohastav 05.jpg" />
+            </div>
+            <div class="absolute top-2 right-2">
+                <img alt="Pavni Mahotsav 2024 Logo" class="h-20 md:h-24" src="public/pavani mohastav 05.jpg" />
+            </div> -->
+            <h1 class="text-red-700 text-3xl md:text-3xl font-bold text-center hindi-text pt-2 pb-2">
+                Major Events and Artists Lineup
             </h1>
-            <h1 class="text-white text-6xl md:text-8xl font-extrabold italic"
-                style="font-family: 'Arial Black', Gadget, sans-serif; text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">
-                Night</h1>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4 text-center">
+                <div class="flex flex-col items-center">
+                    <p class="text-blue-700 text-lg font-semibold hindi-text mb-1">
+                        Day 1 (24 June)
+                    </p>
+                    <p class="text-yellow-300 text-2xl font-bold hindi-text mb-1">
+                        Faizan Taj
+                    </p>
+                    <img alt="LED TV" class="h-32 md:h-40 object-contain rounded-lg shadow-lg"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNTSk0sAdHzHxdnqaIOgyA8OAmaJAJzzeAkg&s" />
+                </div>
+                <div class="flex flex-col items-center">
+                    <p class="text-blue-700 text-lg font-semibold hindi-text mb-1">
+                        Day 2 (25 June)
+                    </p>
+                    <p class="text-yellow-300 text-2xl font-bold hindi-text mb-1">
+                        Dance Mahasangram
+                    </p>
+                    <img alt="Washing Machine" class="h-32 md:h-40 object-contain rounded-lg shadow-lg"
+                        src="https://miro.medium.com/v2/resize:fit:900/1*Y4CCJ73gTiK4fOxn63G-dQ@2x.jpeg" />
+                </div>
+                <div class="flex flex-col items-center">
+                    <p class="text-blue-700 text-lg font-semibold hindi-text mb-1">
+                        Day 3 (26 June)
+                    </p>
+                    <p class="text-yellow-300 text-2xl font-bold hindi-text mb-1">Zephyrtone - The Duo</p>
+                    <img alt="Wardrobe" class="h-32 md:h-40 object-contain rounded-lg shadow-lg"
+                        src="https://i.scdn.co/image/ab67616d00001e0214804d987881a6e0b164df29" />
+                </div>
+            </div>
         </div>
     </div>
+
+    <iframe id="eventFrame" src="event_stage.html" frameborder="0"
+        class="max-w-4xl w-full h-full shadow-xl rounded-lg overflow-hidden"></iframe>
+
+    <iframe id="eventFrame" src="events.html" class="max-w-4xl w-full shadow-xl rounded-lg overflow-hidden"
+        frameborder="0"></iframe>
+    <iframe id="eventFrame" src="pavni_mahotsav_3.html" class="max-w-4xl w-full shadow-xl rounded-lg overflow-hidden"
+        frameborder="0"></iframe>
+
     <div class="bg-yellow-50 max-w-4xl w-full shadow-xl rounded-lg overflow-hidden">
         <div class="bg-white p-4 relative">
             <div class="relative top-2 left-2">
@@ -75,7 +212,7 @@
                     <p class="text-yellow-300 text-2xl font-bold hindi-text mb-1">
                         टिव्ही (LED)
                     </p>
-                    <img alt="LED TV" class="h-32 md:h-40 object-contain"
+                    <img alt="LED TV" class="h-32 md:h-40 object-contain  rounded-lg shadow-lg"
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhZNS7y5nPwvlHzmFzwQ0_aAxGFza6kaiHSPx_NVvuOmgkkC2eqNrP6LRWgrnX2GmbB6u7IYJRzYb_qKB1myy48bA_BZvudTuLq236q5ksNHXhDV39-cSUPWZR1GXk6lLYhzjml3NVetUyC49QzAST96KoKJ8KdrZ_zRznoYtyxxns7hwY5lAXhVJraE7un1hrOYnONcI5mGa6AN6BUYHrpagOK-owxae-JFeUTEmsxdq3l1J_ItOe6JuL4gKqq14fCkx4NTdKHu6f" />
                 </div>
                 <div class="flex flex-col items-center">
@@ -85,7 +222,7 @@
                     <p class="text-yellow-300 text-2xl font-bold hindi-text mb-1">
                         वॉशिंग मशीन
                     </p>
-                    <img alt="Washing Machine" class="h-32 md:h-40 object-contain"
+                    <img alt="Washing Machine" class="h-32 md:h-40 object-contain rounded-lg shadow-lg"
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK8kFTQpHS5LWtDu9ZRL-Xl3klac1TEgmpg0hsHUtl8IViJPeErJZ4y48xlfJ_rsp6IJ7BXw80HR-wnFBslDCE8jvytnv9IpJNlgE2240F2bAmzvvvoZSwa56vZFCk6LDpwNFvcitDcgyLEE01VYn-LitiYU8RID4tRpUvB0ZJ3foam0x-bHTAa6XgxWwI9bEpduZ0NhnvvuQKWFwQJhOEAD4USx_nWs8e8WQy4amlLJfkyGNxw9UIYy2Q06Ro8oJN7a8C_-uCM2rW" />
                 </div>
                 <div class="flex flex-col items-center">
@@ -93,19 +230,13 @@
                         दिवस ३ रा (२६ जून)
                     </p>
                     <p class="text-yellow-300 text-2xl font-bold hindi-text mb-1">आलमारी</p>
-                    <img alt="Wardrobe" class="h-32 md:h-40 object-contain"
+                    <img alt="Wardrobe" class="h-32 md:h-40 object-contain rounded-lg shadow-lg"
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfSGAmK6aoBYagjQldkZ-E9hPks-AD6BvUol4F9fHeCkonmKKIV5WPILw4wQ_7PeejWUVfu4z9-QBZCRYUzlkRrcek8OowN2Odw0OGBt2eY0-3lW96_xUEGpjg4zzv5bJevBtpMCwUxhfbLPiG9hoX65Ba7GeKAcsSOJnxOM7Fvg7gNA5I038Dn5H4WJ3qhtoePg7ZRPuLh_LvdvdPKxtlt5ZKI5CcWlrbj7TU5NBbtzQiFDlxyIsLziUlf9Z36jdOOWMiVySqpEgZ" />
                 </div>
             </div>
         </div>
     </div>
 
-    <iframe id="eventFrame" src="event_stage.html" frameborder="0"
-        class="max-w-4xl w-full shadow-xl rounded-lg overflow-hidden"></iframe>
-    <iframe id="eventFrame" src="events.html" class="max-w-4xl w-full shadow-xl rounded-lg overflow-hidden"
-        frameborder="0"></iframe>
-    <iframe id="eventFrame" src="pavni_mahotsav_3.html" class="max-w-4xl w-full shadow-xl rounded-lg overflow-hidden"
-        frameborder="0"></iframe>
     <iframe id="eventFrame" src="contact.html" class="max-w-4xl w-full shadow-xl rounded-lg overflow-hidden"
         frameborder="0"></iframe>
 
@@ -129,6 +260,41 @@
                 iframe.addEventListener('load', resizeAllIframes);
             });
         });
+
+        // Slideshow functionality
+        const slides = document.querySelectorAll(".slide");
+        const indicators = document.querySelectorAll(".indicator");
+        let currentSlide = 0;
+        let slideInterval;
+
+        function showSlide(index) {
+            slides[currentSlide].classList.remove("active");
+            indicators[currentSlide].classList.remove("active");
+
+            currentSlide = index;
+
+            slides[currentSlide].classList.add("active");
+            indicators[currentSlide].classList.add("active");
+        }
+
+        function nextSlide() {
+            const next = (currentSlide + 1) % slides.length;
+            showSlide(next);
+        }
+
+        function goToSlide(index) {
+            showSlide(index);
+            resetSlideInterval();
+        }
+
+        function resetSlideInterval() {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+
+        // Start slideshow
+        slideInterval = setInterval(nextSlide, 5000);
+
     </script>
 
 </body>
